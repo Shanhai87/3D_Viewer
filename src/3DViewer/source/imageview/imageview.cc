@@ -157,7 +157,7 @@ void ImageView::SetPositionY(float position_y) { position_[1] = position_y; }
 
 void ImageView::SetPositionZ(float position_z) { position_[2] = position_z; }
 
-void ImageView::SetPositionAll(float position[]) {
+void ImageView::SetPositionAll(float *position) {
   position_[0] = position[0];
   position_[1] = position[1];
   position_[2] = position[2];
