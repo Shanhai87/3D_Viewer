@@ -7,6 +7,5 @@ src/3DViewer/obj/
 src/3DViewer/qmake_qmake_qm_files.qrc
 src/3DViewer/qrc_qmake_qmake_qm_files.cpp
 src/3DViewer/qrc_resource.cpp
-src/3DViewer/tests/t.bmp
 src/3DViewer/ui_mainwindow.h
 src/3DViewer_2.0.app/
