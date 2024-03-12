@@ -5,6 +5,7 @@
 
 #include <cmath>
 #include <fstream>
+#include <sstream>
 #include <iostream>
 #include <set>
 #include <string>
@@ -94,6 +95,7 @@ class Parser {
                  int first, int second);
   void CustomSplit(std::vector<std::string> &strings, std::string &str);
 
+  double GetDoubleFromString(std::string &str);
   ParserErrors ParseTextureNormalVertex(std::vector<std::string> &strings,
                                         ParseType type);
   ParserErrors ParseFace(

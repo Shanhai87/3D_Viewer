@@ -100,13 +100,36 @@ void Parser::CustomSplit(std::vector<std::string> &strings, std::string &str) {
   }
 }
 
+double Parser::GetDoubleFromString(std::string &str) {
+  int sign = 1, div = 1;
+  size_t i = 0;
+  bool point = false;
+  double number = 0;
+  if (str[i] == '-') {
+    sign = -1;
+    ++i;
+  }
+  while ((std::isdigit(str[i]) || str[i] == '.') && i < str.size()) {
+    if (std::isdigit(str[i])) {
+      number = number * 10 + str[i] - 48;
+      if (point) div *= 10;
+    }
+    else if (str[i] == '.') point = true;
+    ++i;
+  }
+  return sign * number / div;
+}
+
 ParserErrors Parser::ParseTextureNormalVertex(std::vector<std::string> &strings,
                                               ParseType type) {
   ParserErrors result = kSuccess;
   double num;
   try {
     for (int i = 0; i < (type == kTexture ? 2 : 3); ++i) {
-      num = stod(strings[i]);
+      // std::istringstream iss(strings[i]);
+      // iss >> num;
+      num = GetDoubleFromString(strings[i]);
+      // num = stod(strings[i]);
       if (type == kTexture) {
         textures_.push_back(num);
       } else if (type == kNormal) {

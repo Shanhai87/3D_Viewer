@@ -66,7 +66,7 @@ install:
 	@$(MAKE) -C ./3DViewer
 
 uninstall:
-	if [ -f 3DViewer/Makefile ]; then  $(MAKE) -C ./3DViewer distclean ; fi;
+	@if [ -f 3DViewer/Makefile ]; then  $(MAKE) -C ./3DViewer distclean ; fi;
 	$(RM) $(TEST_TARGET)
 	$(MAKE) clean_2
 	$(RM) $(DOC_DIR)$(HTML_DIR)
