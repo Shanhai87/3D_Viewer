@@ -135,5 +135,3 @@ Develop a program to visualize the 3D model.
 - After the texture is loaded, the "Unload texture" button should appear in the program interface, which makes the texture unloaded from the program memory and no longer displayed on the model
 - Read the UV-map of the model from the obj-file
 - The program must allow saving a UV-map of the model over the selected texture into a separate BMP-file; the texture must show the specified color of the model's map
-
-💡 [Tap here](https://forms.yandex.ru/cloud/64181b936938722405a1286e/) **to leave your feedback on the project**. Pedago Team really tries to make your educational experience better.
